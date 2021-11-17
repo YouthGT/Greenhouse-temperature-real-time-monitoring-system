@@ -1,4 +1,4 @@
-нб╤х╡Б©ь.obj
+╢СеОнб╤х╪Ю╡Б.obj
 cvi.lib
 NIDAQmx.lib
 cvistart.lib

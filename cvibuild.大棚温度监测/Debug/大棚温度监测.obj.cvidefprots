@@ -1,0 +1,55 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char *argv[]);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:12:5"
+
+[acquire]
+Class="Function"
+Prototype="int acquire(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:25:17"
+
+[stop]
+Class="Function"
+Prototype="int stop(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:42:17"
+
+[AItimerread]
+Class="Function"
+Prototype="int AItimerread(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:57:17"
+
+[SetAlarms]
+Class="Function"
+Prototype="int SetAlarms(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:89:17"
+
+[Quit]
+Class="Function"
+Prototype="int Quit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:107:17"
+
+[Temsetting]
+Class="Function"
+Prototype="void Temsetting(int menuBar, int menuItem, void *callbackData, int panel);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:125:18"
+
+[Humsetting]
+Class="Function"
+Prototype="void Humsetting(int menuBar, int menuItem, void *callbackData, int panel);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:130:18"
+
+[About]
+Class="Function"
+Prototype="void About(int menuBar, int menuItem, void *callbackData, int panel);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:135:18"
+
+[PanelAbout]
+Class="Function"
+Prototype="int PanelAbout(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:146:17"
+
+[Hide]
+Class="Function"
+Prototype="int Hide(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:165:17"
+

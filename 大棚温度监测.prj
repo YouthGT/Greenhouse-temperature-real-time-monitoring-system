@@ -1,7 +1,8 @@
 [Project Header]
 Version = 2000
 Encoding = "ANSI"
-Pathname = "/g/All open source projects/大棚温度实时检测系统/温度测控.prj"
+Pathname Line0001 = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.pr"
+Pathname Line0002 = "j"
 CVI Dir = "/c/program files (x86)/national instruments/cvi2020"
 CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
 CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2020"
@@ -22,34 +23,35 @@ Don't Display Deploy InstrDrv Dialog = False
 Include Files Folder Not Added Yet = True
 Instrument Files Folder Not Added Yet = True
 Library Files Folder Not Added Yet = True
-Folder 0 = "User Interface Files"
-FolderEx 0 = "User Interface Files"
-Folder 1 = "Source Files"
-FolderEx 1 = "Source Files"
+Folder 0 = "Source Files"
+FolderEx 0 = "Source Files"
+Folder 1 = "User Interface Files"
+FolderEx 1 = "User Interface Files"
 
 [File 0001]
-File Type = "User Interface Resource"
+File Type = "CSource"
 Res Id = 1
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "温度测控.uir"
-Path = "/g/All open source projects/大棚温度实时检测系统/温度测控.uir"
-Exclude = False
-Project Flags = 0
-Folder = "User Interface Files"
-Folder Id = 0
-
-[File 0002]
-File Type = "CSource"
-Res Id = 2
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "温度测控.c"
-Path = "/g/All open source projects/大棚温度实时检测系统/温度测控.c"
+Path Rel Path = "大棚温度监测.c"
+Path = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
+Folder Id = 0
+
+[File 0002]
+File Type = "User Interface Resource"
+Res Id = 2
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "大棚温度监测.uir"
+Path Line0001 = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.ui"
+Path Line0002 = "r"
+Exclude = False
+Project Flags = 0
+Folder = "User Interface Files"
 Folder Id = 1
 
 [Custom Build Configs]
@@ -120,21 +122,21 @@ Comments = ""
 Comments Ex = ""
 Company Name = ""
 Company Name Ex = "%company"
-File Description = "温度测控 (Debug x86)"
+File Description = "大棚温度监测_dbg (Debug x86)"
 File Description Ex = "%application (%rel_dbg %arch)"
 File Version = "1.0"
 File Version Ex = "%f1.%f2"
-Internal Name = "温度测控"
+Internal Name = "大棚温度监测_dbg"
 Internal Name Ex = "%basename"
 Legal Copyright = "Copyright   2021"
 Legal Copyright Ex = "Copyright  %company %Y"
 Legal Trademarks = ""
 Legal Trademarks Ex = ""
-Original Filename = "温度测控.exe"
+Original Filename = "大棚温度监测_dbg.exe"
 Original Filename Ex = "%filename"
 Private Build = ""
 Private Build Ex = ""
-Product Name = " 温度测控"
+Product Name = " 大棚温度监测_dbg"
 Product Name Ex = "%company %application"
 Product Version = "1.0"
 Product Version Ex = "%p1.%p2"
@@ -405,8 +407,9 @@ Compiler Defines = "/DWIN32_LEAN_AND_MEAN"
 [Create Executable]
 Executable File_Debug Is Rel = True
 Executable File_Debug Rel To = "Project"
-Executable File_Debug Rel Path = "温度测控.exe"
-Executable File_Debug = "/g/All open source projects/大棚温度实时检测系统/温度测控.exe"
+Executable File_Debug Rel Path = "大棚温度监测_dbg.exe"
+Executable File_Debug Line0001 = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测_db"
+Executable File_Debug Line0002 = "g.exe"
 Executable File_Release Is Rel = True
 Executable File_Release Rel To = "Project"
 Executable File_Release Rel Path = "release/大棚温度实时检测系统.exe"

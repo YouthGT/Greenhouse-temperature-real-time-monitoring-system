@@ -1,7 +1,7 @@
 #include <NIDAQmx.h>
 #include <cvirte.h>		
 #include <userint.h>
-#include "ÎÂ¶È²â¿Ø.h"
+#include "´óÅïÎÂ¶È¼à²â.h"
 
 static TaskHandle AItaskhandle;
 double aidata[3]={25.0,0,18.0};
@@ -13,7 +13,7 @@ int main (int argc, char *argv[])
 {
 	if (InitCVIRTE (0, argv, 0) == 0)
 		return -1;	/* out of memory */
-	if ((panelHandle = LoadPanel (0, "ÎÂ¶È²â¿Ø.uir", PANEL)) < 0)
+	if ((panelHandle = LoadPanel (0, "´óÅïÎÂ¶È¼à²â.uir", PANEL)) < 0)
 		return -1;
 	DisplayPanel (panelHandle);
 	RunUserInterface ();
@@ -135,7 +135,7 @@ void CVICALLBACK Humsetting (int menuBar, int menuItem, void *callbackData,
 void CVICALLBACK About (int menuBar, int menuItem, void *callbackData,
 						int panel)
 {
-	about = LoadPanel (panelHandle, "ÎÂ¶È²â¿Ø.uir", PANEL_Abou);
+	about = LoadPanel (panelHandle, "´óÅïÎÂ¶È¼à²â.uir", PANEL_Abou);
 	DisplayPanel (about);
 }
 

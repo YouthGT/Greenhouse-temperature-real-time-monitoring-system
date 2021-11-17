@@ -1,6 +1,7 @@
 [Workspace Header]
 Version = 2000
-Pathname = "/g/All open source projects/大棚温度实时检测系统/温度测控.cws"
+Pathname Line0001 = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.cw"
+Pathname Line0002 = "s"
 CVI Dir = "/c/program files (x86)/national instruments/cvi2020"
 CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
 CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2020"
@@ -11,12 +12,12 @@ VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
 VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
 Number of Projects = 1
 Active Project = 1
-Project 0001 = "温度测控.prj"
+Project 0001 = "大棚温度监测.prj"
 Drag Bar Left = 326
-Window Top = 162
-Window Left = 256
-Window Bottom = 930
-Window Right = 1339
+Window Top = 96
+Window Left = 262
+Window Bottom = 860
+Window Right = 1345
 Maximized = False
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -46,29 +47,29 @@ Batch Build Release = False
 Batch Build Debug = False
 
 [File 0001]
-Path = "/g/All open source projects/大棚温度实时检测系统/温度测控.uir"
+Path = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.c"
+File Type = "CSource"
+Disk Date = 3720008167
+In Projects = "1,"
+Source Window State = "1,137,137,137,43,43,43,0,0,0,0,0,0,0,0,0,65,0,137,43,400,600,0,0,"
+Window Z-Order = 1
+
+[File 0002]
+Path Line0001 = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.ui"
+Path Line0002 = "r"
 File Type = "User Interface Resource"
-Disk Date = 3720007284
+Disk Date = 3720008154
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
 Window Height = 349
 Window Width = 621
-Window Z-Order = 1
-
-[File 0002]
-Path = "/g/All open source projects/大棚温度实时检测系统/温度测控.c"
-File Type = "CSource"
-Disk Date = 3720007068
-In Projects = "1,"
-Source Window State = "1,140,140,140,0,0,0,0,0,0,0,0,0,0,0,0,117,0,140,0,349,628,1,0,"
-Window Top = 219
-Window Left = 106
 Window Z-Order = 2
 
 [Tab Order]
-Tab 0001 = "/g/All open source projects/大棚温度实时检测系统/温度测控.c"
-Tab 0002 = "/g/All open source projects/大棚温度实时检测系统/温度测控.uir"
+Tab 0001 = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.c"
+Tab 0002 Line0001 = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.ui"
+Tab 0002 Line0002 = "r"
 
 [Default Build Config 0001 Debug]
 Generate Browse Info = True

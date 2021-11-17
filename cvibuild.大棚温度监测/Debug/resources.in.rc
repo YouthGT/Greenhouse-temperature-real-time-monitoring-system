@@ -1,13 +1,13 @@
 #pragma code_page(65001)
 #include "C:\Program Files (x86)\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
 
-2 ICON "c:\\Users\\youth\\Desktop\\温度测控\\fodder\\yezi.ico"
-1 24 "c:\\Users\\youth\\Desktop\\温度测控\\cvibuild.温度测控\\Debug\\manifest.xml"
+2 ICON "g:\\All open source projects\\大棚温度实时检测系统\\fodder\\yezi.ico"
+1 24 "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.大棚温度监测\\Debug\\manifest.xml"
 
 
 STRINGTABLE DISCARDABLE
 BEGIN
-  65535  "温度测控"
+  65535  "大棚温度监测_dbg"
 END
 
 VS_VERSION_INFO VERSIONINFO
@@ -24,12 +24,12 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "CompanyName", "\0"
-            VALUE "FileDescription", "温度测控 (Debug x86)\0"
+            VALUE "FileDescription", "大棚温度监测_dbg (Debug x86)\0"
             VALUE "FileVersion", "1.0\0"
-            VALUE "InternalName", "温度测控\0"
+            VALUE "InternalName", "大棚温度监测_dbg\0"
             VALUE "LegalCopyright", "Copyright   2021\0"
-            VALUE "OriginalFilename", "温度测控.exe\0"
-            VALUE "ProductName", " 温度测控\0"
+            VALUE "OriginalFilename", "大棚温度监测_dbg.exe\0"
+            VALUE "ProductName", " 大棚温度监测_dbg\0"
             VALUE "ProductVersion", "1.0\0"
         END
     END
