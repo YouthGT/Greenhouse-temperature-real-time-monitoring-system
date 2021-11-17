@@ -1,0 +1,42 @@
+-nologo
+-out:g:\All open source projects\大棚温度实时检测系统\cvibuild.温度测控\Release\大棚温度实时检测系统.exe
+-arch:x86
+-timestamp
+-loadextmod
+-res:g:\All open source projects\大棚温度实时检测系统\cvibuild.温度测控\Release\resources.res
+-entry:_CVIWinMainStartupCode@0
+-base:0x400000
+-linked:g:\All open source projects\大棚温度实时检测系统\cvibuild.温度测控\Release\linkersummary.txt
+-dlldeps:g:\All open source projects\大棚温度实时检测系统\cvibuild.温度测控\Release\dlldependencies.txt
+-licensing:g:\All open source projects\大棚温度实时检测系统\cvibuild.温度测控\Release\linkerlicensing.txt
+-browsedeps:g:\All open source projects\大棚温度实时检测系统\cvibuild.温度测控\Release\moduledependencies.txt
+-map:g:\All open source projects\大棚温度实时检测系统\cvibuild.温度测控\Release\map_file.txt
+-stackreserve:1048576
+-stackcommit:4096
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\advanlys.lib
+-in:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\cvi_db.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\cviauto.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\cvidotnet.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\cvinetstreams.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\cvinetv.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\cvintwrk.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\cvitdms.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\gpib.lib
+-in:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\ivi.lib
+-in:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\NIDAQmx.lib
+-in:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\nisyscfg.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\nivxi.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\bin\msvc\omp.lib
+-in:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\pid.lib
+-in:c:\Program Files (x86)\National Instruments\CVI2020\toolslib\toolbox\msvc\toolbox.obj
+-in:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\visa.lib
+-in:g:\All open source projects\大棚温度实时检测系统\cvibuild.温度测控\Release\温度测控.obj
+-more:c:\program files (x86)\national instruments\cvi2020\bin\msvc\cvistart.lib
+-more:c:\program files (x86)\national instruments\cvi2020\bin\msvc\cvi.lib
+-more:C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86\advapi32.lib
+-more:C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86\bufferoverflowu.lib
+-more:C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86\gdi32.lib
+-more:C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86\kernel32.lib
+-more:C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86\user32.lib
+-more:C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86\uuid.lib
+-more:C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x86\winmm.lib

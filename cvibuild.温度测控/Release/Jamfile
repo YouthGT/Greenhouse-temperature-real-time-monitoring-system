@@ -1,0 +1,42 @@
+HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2020\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "温度测控.c" = "g:\\All open source projects\\大棚温度实时检测系统" ;
+Object "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\温度测控.obj" : "g:\\All open source projects\\大棚温度实时检测系统\\温度测控.c" ;
+FILENUM on "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\温度测控.obj" = 1 ;
+DEFPROTS on "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\温度测控.obj" = "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\温度测控.obj.cvidefprots" ;
+OUTFILE on "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\温度测控.obj" = "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\温度测控.obj.out" ;
+PrjObjects += "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\温度测控.obj" ;
+Object "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\resources.res" : "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\resources.in.rc" ;
+Depends "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\resources.res" : "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\manifest.xml" ;
+MainFromObjects "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\大棚温度实时检测系统.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\大棚温度实时检测系统.exe" : "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\link_options.txt" ;
+Depends "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\大棚温度实时检测系统.exe" : "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\resources.res" ;
+Depends "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\resources.res" :  "g:\\All open source projects\\大棚温度实时检测系统\\温度测控.uir" ;
+Depends all : "g:\\All open source projects\\大棚温度实时检测系统\\cvibuild.温度测控\\Release\\大棚温度实时检测系统.exe" ;
