@@ -43,13 +43,3 @@ Class="Function"
 Prototype="void About(int menuBar, int menuItem, void *callbackData, int panel);"
 SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:135:18"
 
-[PanelAbout]
-Class="Function"
-Prototype="int PanelAbout(int panel, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:146:17"
-
-[Hide]
-Class="Function"
-Prototype="int Hide(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:165:17"
-

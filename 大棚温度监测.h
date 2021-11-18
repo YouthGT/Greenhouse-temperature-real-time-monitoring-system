@@ -32,9 +32,6 @@
 #define  PANEL_TEXTMSG_3                  17      /* control type: textMsg, callback function: (none) */
 #define  PANEL_TEXTMSG_5                  18      /* control type: textMsg, callback function: (none) */
 
-#define  PANEL_Abou                       2       /* callback function: PanelAbout */
-#define  PANEL_Abou_HIDE                  2       /* control type: command, callback function: Hide */
-
 
      /* Control Arrays: */
 
@@ -55,9 +52,7 @@
 void CVICALLBACK About(int menubar, int menuItem, void *callbackData, int panel);
 int  CVICALLBACK acquire(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK AItimerread(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
-int  CVICALLBACK Hide(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 void CVICALLBACK Humsetting(int menubar, int menuItem, void *callbackData, int panel);
-int  CVICALLBACK PanelAbout(int panel, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK Quit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SetAlarms(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK stop(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);

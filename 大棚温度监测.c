@@ -135,41 +135,6 @@ void CVICALLBACK Humsetting (int menuBar, int menuItem, void *callbackData,
 void CVICALLBACK About (int menuBar, int menuItem, void *callbackData,
 						int panel)
 {
-	about = LoadPanel (panelHandle, "大棚温度监测.uir", PANEL_Abou);
-	DisplayPanel (about);
+     MessagePopup("关于", "课程设计-YouthGT");
 }
 
-/*┌──────────────────────────────────────────────────────┐
-  │ 关于面板                                              │
-  └──────────────────────────────────────────────────────┘*/
-
-int CVICALLBACK PanelAbout (int panel, int event, void *callbackData,
-							int eventData1, int eventData2)
-{
-	switch (event)
-	{
-		case EVENT_GOT_FOCUS:
-
-			break;
-		case EVENT_LOST_FOCUS:
-
-			break;
-		case EVENT_CLOSE:
-            QuitUserInterface (0);
-			break;
-			
-	}
-	return 0;
-}
-/*隐藏子面板*/
-int CVICALLBACK Hide (int panel, int control, int event,
-					  void *callbackData, int eventData1, int eventData2)
-{
-	switch (event)
-	{
-		case EVENT_COMMIT:
-			HidePanel (about);
-			break;
-	}
-	return 0;
-}
