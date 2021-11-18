@@ -1,23 +1,20 @@
 #include <ansi_c.h>
-#include <NIDAQmx.h>
+#include <stdio.h>
 #include <formatio.h>
-#include <utility.h>
+#include <NIDAQmx.h>
 #include <cvirte.h>		
 #include <userint.h>
 #include "大棚温度监测.h"
 
-
 static TaskHandle AItaskhandle;
-
 double aidata[3]={25.0,0,18.0};
-
-double upper_limit =25,lower_limit =18;//默认高低限
+float64 AIdata[1000];
+double upper_limit =25,lower_limit =18;
 static int panelHandle;
-int fileTypeI=1;//默认输入ASCII类型
-int fileTypeO=1;//默认输出ASCII类型
-char timeString[256],dateString[512];//时间、日期数组
+int fileTypeI=1;
+int fileTypeO=1;
 static char proj_dir[MAX_PATHNAME_LEN];
-char file_name[512];
+char file_name[MAX_PATHNAME_LEN];
 
 int main (int argc, char *argv[])
 {
@@ -31,41 +28,21 @@ int main (int argc, char *argv[])
 	return 0;
 }
 
-
-
-/*采集按钮*/
-int CVICALLBACK acquire (int panel, int control, int event,
-		void *callbackData, int eventData1, int eventData2)
+int CVICALLBACK Quit (int panel, int control, int event,
+					  void *callbackData, int eventData1, int eventData2)
 {
-	int AIrate;
-    char AIchanel[256];
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			GetCtrlVal (panelHandle, PANEL_AIcontrol, AIchanel);// 从界面得到模拟输入通道
-			GetCtrlVal (panelHandle, PANEL_AIrate, &AIrate); // 从界面得到点数
-			DAQmxCreateTask ("", &AItaskhandle); // 创建模拟输入任务
-			//创建模拟输入通道
-			DAQmxCreateAIVoltageChan (AItaskhandle, AIchanel, "Voltage", DAQmx_Val_RSE, -5.0, 5, DAQmx_Val_Volts, "");
-
-			
-			// 设置采样率
-			DAQmxCfgSampClkTiming (AItaskhandle, "", AIrate, DAQmx_Val_Rising, DAQmx_Val_ContSamps, 100);
-			
-			//启用aitimer
-			SetCtrlAttribute (panelHandle, PANEL_AITIMER, ATTR_ENABLED, 1);
-			//启用保存数据
-			SetCtrlAttribute (panelHandle, PANEL_SaveData, ATTR_DIMMED, 0);
-			//防止重复点击
-			SetCtrlAttribute (panelHandle, PANEL_Acqsample, ATTR_DIMMED, 1);
-            
+			DAQmxClearTask (AItaskhandle);
+			QuitUserInterface (0);
 			break;
 	}
 	return 0;
 }
-/*停止*/
+
 int CVICALLBACK stop (int panel, int control, int event,
-					  void *callbackData, int eventData1, int eventData2)
+		void *callbackData, int eventData1, int eventData2)
 {
 	switch (event)
 	{
@@ -73,11 +50,55 @@ int CVICALLBACK stop (int panel, int control, int event,
 			 SetCtrlAttribute (panelHandle, PANEL_AITIMER, ATTR_ENABLED, 0);
 			 DAQmxClearTask (AItaskhandle);
 			 AItaskhandle=0;
+			 SetCtrlAttribute (panelHandle, PANEL_ClEAN, ATTR_DIMMED, 0);
+			 break;
+	}
+	return 0;
+}
+/*保存数据*/
+int CVICALLBACK SaveData (int panel, int control, int event,
+						  void *callbackData, int eventData1, int eventData2)
+{
+	char dateTime[50];
+    char *TimeStr (void);
+	char *DateStr (void);
+GetSystemTime
+	strcpy(dateTime,DateStr);
+    strcat(dateTime," ");
+    strcat(dateTime,TimeStr);
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			
+        file_name = strcat(Date, Time);
+        if (FileSelectPopupEx (proj_dir, "*.txt", "*.txt", "Name of File to Save", VAL_SAVE_BUTTON, 0, 1, file_name))
+	        {
+				ArrayToFile (file_name, aidata, VAL_DOUBLE, 3, 1, VAL_GROUPS_TOGETHER, VAL_GROUPS_AS_COLUMNS, VAL_CONST_WIDTH, 10, fileTypeO, VAL_TRUNCATE);
+	        }
 			break;
 	}
 	return 0;
 }
-/*清空显示*/
+
+/*采集按钮*/
+int CVICALLBACK acquire (int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			//创建
+			 DAQmxCreateTask ("", &AItaskhandle);
+			 DAQmxCreateAIVoltageChan (AItaskhandle, "Dev1/ai0", "Voltage", DAQmx_Val_RSE, -5.0, 5, DAQmx_Val_Volts, "");
+			 DAQmxCfgSampClkTiming (AItaskhandle, "", 1000, DAQmx_Val_Rising, DAQmx_Val_ContSamps, 100);
+			 SetCtrlAttribute (panelHandle, PANEL_AITIMER, ATTR_ENABLED, 1);
+             SetCtrlAttribute (panelHandle, PANEL_SaveData, ATTR_DIMMED, 0);
+
+			break;
+	}
+	return 0;
+}
+/*清空*/
 int CVICALLBACK Clean (int panel, int control, int event,
 					   void *callbackData, int eventData1, int eventData2)
 {
@@ -89,28 +110,8 @@ int CVICALLBACK Clean (int panel, int control, int event,
 	}
 	return 0;
 }
-/*保存数据*/
-int CVICALLBACK SaveData (int panel, int control, int event,
-						  void *callbackData, int eventData1, int eventData2)
-{
 
-	switch (event)
-	{
-		case EVENT_COMMIT:
-			
-         strcat(dateString,timeString);
-		 strcpy(file_name,dateString);
-        if (FileSelectPopupEx (proj_dir, "*.txt", "*.txt", "Name of File to Save", VAL_SAVE_BUTTON, 0, 1, file_name))
-	        {
-				ArrayToFile (file_name, aidata, VAL_DOUBLE, 3, 1, VAL_GROUPS_TOGETHER, VAL_GROUPS_AS_COLUMNS, VAL_CONST_WIDTH, 10, fileTypeO, VAL_TRUNCATE);
-	        }
-			break;
-	}
-	return 0;
-}
-
-
-/*上下限设置*/
+/*温度限设置*/
 int CVICALLBACK SetAlarms(int panel, int control, int event, void *callbackData, int eventData1, int eventData2)
 {
     if (event == EVENT_VAL_CHANGED)
@@ -126,36 +127,17 @@ int CVICALLBACK SetAlarms(int panel, int control, int event, void *callbackData,
             }
 
     return 0;
-}
-/*退出*/
-int CVICALLBACK Quit (int panel, int control, int event,
-		void *callbackData, int eventData1, int eventData2)
-{
-	int Waring;
-	switch (event)
-	{
-		case EVENT_COMMIT:
-			Waring = ConfirmPopup ("警告", "是否关闭系统？");
-			if(Waring)
-			{
-				DAQmxClearTask (AItaskhandle);
-				QuitUserInterface (0);
-			}
-			else
-				break;
-			break;
-	}
-	return 0;
+
 }
 
-/*采集timer*/
+/*定时采集*/
 int CVICALLBACK AItimerread (int panel, int control, int event,
 		void *callbackData, int eventData1, int eventData2)
 {
-	uInt32 DOdataHigh,DOdataLow;
-    float64 AIdata[1000], AIData[1000];
+
 	int32 sampsread;
 	int i=0;
+	double TEMP;
 
 	
 	switch (event)
@@ -166,9 +148,7 @@ int CVICALLBACK AItimerread (int panel, int control, int event,
 		    AIdata[i]= AIdata[i]*12.5+3; //标度变换
 			aidata[1]=AIdata[i];//将采集数据传递给第二组Cursor,以便在示波器中显示
 			PlotStripChart (panelHandle, PANEL_STRIPCHART, aidata, 3, 0, 0, VAL_DOUBLE);
-			SetCtrlVal (panelHandle, PANEL_TEMP, aidata[1]);
-			SetCtrlAttribute (panelHandle, PANEL_ALARM_LOW, ATTR_ON_COLOR, VAL_BLUE);
-			
+			SetCtrlVal (panelHandle, PANEL_TEMP,AIdata[i]);//赋值，实时显示温度
 			if (AIdata[i] >= upper_limit) 
 				SetCtrlVal (panelHandle, PANEL_ALARM_HIGH, 1);
    	   	    else
@@ -177,36 +157,18 @@ int CVICALLBACK AItimerread (int panel, int control, int event,
 				SetCtrlVal (panelHandle, PANEL_ALARM_LOW, 1);
 			else
 				SetCtrlVal (panelHandle, PANEL_ALARM_LOW, 0);
-			
+	
 			break;
 	}
 	return 0;
 }
 
-/*获取时间timer*/
-int CVICALLBACK systemtime (int panel, int control, int event,
-							void *callbackData, int eventData1, int eventData2)
-{   
-    
-    int Seconds;
-    int Minutes;
-    int Hours;
-	int Month;
-	int Day;
-	int Year;
-	char timeString[256],dateString[256];
-	switch (event)
-	{
-		case EVENT_TIMER_TICK:
-		GetSystemTime (&Hours, &Minutes, &Seconds);
-		GetSystemDate (&Month, &Day, &Year);
-        Fmt (dateString, "%d年%d月%d日",Year,Month,Day);
-		Fmt (timeString, "%d:%d:%d",Hours,Minutes,Seconds);                    
-	    SetCtrlVal (panelHandle, PANEL_STRING, dateString);
-        SetCtrlVal (panelHandle, PANEL_STRING_2, timeString);
-			break;
-	}
-	return 0;
+
+
+void CVICALLBACK FileSavePath (int menuBar, int menuItem, void *callbackData,
+							   int panel)
+{
+	
 }
 /*输入文件类型*/
 void CVICALLBACK ASCIII (int menuBar, int menuItem, void *callbackData,

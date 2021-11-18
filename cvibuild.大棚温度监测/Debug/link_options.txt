@@ -1,5 +1,5 @@
 -nologo
--out:g:\All open source projects\大棚温度实时检测系统\cvibuild.大棚温度监测\Debug\大棚温度监测_dbg.exe
+-out:g:\All open source projects\大棚温度实时检测系统\cvibuild.大棚温度监测\Debug\大棚温度监测.exe
 -arch:x86
 -timestamp
 -debug:2

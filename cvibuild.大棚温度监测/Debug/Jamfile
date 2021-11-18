@@ -36,7 +36,7 @@ OUTFILE on "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤
 PrjObjects += "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\╢СеОнб╤х╪Ю╡Б.obj" ;
 Object "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\resources.res" : "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\resources.in.rc" ;
 Depends "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\resources.res" : "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\manifest.xml" ;
-MainFromObjects "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\╢СеОнб╤х╪Ю╡Б_dbg.exe" : $(PrjObjects) $(InstrObjects) ;
-Depends "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\╢СеОнб╤х╪Ю╡Б_dbg.exe" : "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\link_options.txt" ;
-Depends "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\╢СеОнб╤х╪Ю╡Б_dbg.exe" : "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\resources.res" ;
-Depends all : "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\╢СеОнб╤х╪Ю╡Б_dbg.exe" ;
+MainFromObjects "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\╢СеОнб╤х╪Ю╡Б.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\╢СеОнб╤х╪Ю╡Б.exe" : "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\link_options.txt" ;
+Depends "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\╢СеОнб╤х╪Ю╡Б.exe" : "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\resources.res" ;
+Depends all : "g:\\All open source projects\\╢СеОнб╤хй╣й╠╪Л╡Бо╣мЁ\\cvibuild.╢СеОнб╤х╪Ю╡Б\\Debug\\╢СеОнб╤х╪Ю╡Б.exe" ;

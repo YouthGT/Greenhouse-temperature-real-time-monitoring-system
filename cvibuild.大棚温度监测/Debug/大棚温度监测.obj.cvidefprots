@@ -1,45 +1,70 @@
 [main]
 Class="Function"
 Prototype="int main(int argc, char *argv[]);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:12:5"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:22:5"
 
 [acquire]
 Class="Function"
 Prototype="int acquire(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:25:17"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:37:17"
 
 [stop]
 Class="Function"
 Prototype="int stop(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:42:17"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:67:17"
 
-[AItimerread]
+[Clean]
 Class="Function"
-Prototype="int AItimerread(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:57:17"
+Prototype="int Clean(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:81:17"
+
+[SaveData]
+Class="Function"
+Prototype="int SaveData(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:93:17"
 
 [SetAlarms]
 Class="Function"
 Prototype="int SetAlarms(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:89:17"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:114:17"
 
 [Quit]
 Class="Function"
 Prototype="int Quit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:107:17"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:131:17"
 
-[Temsetting]
+[AItimerread]
 Class="Function"
-Prototype="void Temsetting(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:125:18"
+Prototype="int AItimerread(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:152:17"
 
-[Humsetting]
+[systemtime]
 Class="Function"
-Prototype="void Humsetting(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:130:18"
+Prototype="int systemtime(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:187:17"
+
+[ASCIII]
+Class="Function"
+Prototype="void ASCIII(int menuBar, int menuItem, void *callbackData, int panel);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:212:18"
+
+[BinaryI]
+Class="Function"
+Prototype="void BinaryI(int menuBar, int menuItem, void *callbackData, int panel);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:218:18"
+
+[ASCIIO]
+Class="Function"
+Prototype="void ASCIIO(int menuBar, int menuItem, void *callbackData, int panel);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:224:18"
+
+[BinaryO]
+Class="Function"
+Prototype="void BinaryO(int menuBar, int menuItem, void *callbackData, int panel);"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:229:18"
 
 [About]
 Class="Function"
 Prototype="void About(int menuBar, int menuItem, void *callbackData, int panel);"
-SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:135:18"
+SourceLocation="g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c:236:18"
 
