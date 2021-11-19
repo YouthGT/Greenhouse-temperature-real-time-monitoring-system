@@ -8,6 +8,7 @@
 
 
 
+
 static TaskHandle AItaskhandle;
 
 double aidata[3]={25.0,0,18.0};//默认高低限
@@ -17,17 +18,11 @@ int fileTypeI=1;//默认输入ASCII类型
 int fileTypeO=1;//默认输出ASCII类型
 char timeString[256],dateString[256],timeStringfile[256];//时间、日期数组
 static char NewFilePath[512];//文件夹名称
-
+char aiin[10];
 static char proj_dir[MAX_PATHNAME_LEN];
 static char file_name[MAX_PATHNAME_LEN];
 
-void get_filename(char *path, char *name)
-{
-    int i,j = 0;
-    for(i = 0; path[i]; i ++)
-        if(path[i] == '\\') j = i;
-    strcpy(name, &path[j]);
-}
+
 int main (int argc, char *argv[])
 {
 	if (InitCVIRTE (0, argv, 0) == 0)
@@ -108,9 +103,8 @@ int CVICALLBACK SaveData (int panel, int control, int event,
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			strcat(NewFilePath,"//");
-            strcat(NewFilePath,strcat(strcat(dateString, timeStringfile),".txt"));
-			ArrayToFile (NewFilePath, aidata, VAL_DOUBLE, 3, 1, VAL_GROUPS_TOGETHER, VAL_GROUPS_AS_COLUMNS, VAL_CONST_WIDTH, 10, fileTypeO, VAL_TRUNCATE);
+            strcat((dateString, timeStringfile),.txt);
+			ArrayToFile (dateString, aidata, VAL_DOUBLE, 3, 1, VAL_GROUPS_TOGETHER, VAL_GROUPS_AS_COLUMNS, VAL_CONST_WIDTH, 10, fileTypeO,VAL_TRUNCATE);
 			MessagePopup ("保存文件", "保存成功！");  
 
 			break;
@@ -121,35 +115,15 @@ int CVICALLBACK SaveData (int panel, int control, int event,
 int CVICALLBACK OpenData (int panel, int control, int event,
 						  void *callbackData, int eventData1, int eventData2)
 {
-	double aiin[3];
 	switch (event)
 	{
 		case EVENT_COMMIT:
-			 if (FileSelectPopupEx (NewFilePath, "*.txt", "*.txt","选择要打开的文件", VAL_OK_BUTTON, 0, 1, file_name) > 0)
+			 if (FileSelectPopupEx (proj_dir, "*.txt", "*.txt","Name of File to Save", VAL_OK_BUTTON, 0, 1, file_name) > 0)
 				 {
 					
-						FileToArray (file_name, aiin, VAL_DOUBLE, 3, 1, VAL_GROUPS_TOGETHER, VAL_GROUPS_AS_COLUMNS, fileTypeI);
-						printf(file_name);
-						printf("\n--------------------------");
-						if(aiin[0]<aiin[1]&&aiin[1]<aiin[2])
-						   {
-							   printf("\n当时温度正常\n");
-						   }
-						else if(aiin[0]>aiin[1])
-						   {
-							   printf("\n当时温度过低！！！\n");
-						   }
-   						else if(aiin[1]>aiin[2])
-						   {
-							   printf("\n当时温度过高！！！\n");
-						   }  
-						printf("\n--------------------------");   
-						printf("\n温度下限——%lf \n",aiin[0]);
-						printf("--------------------------");
-						printf("\n当时温度——%lf \n",aiin[1]);
-						printf("--------------------------");
-						printf("\n温度上限——%lf \n",aiin[2]);
-						printf("--------------------------");
+					  FileToArray (file_name, aiin, VAL_DOUBLE, 3, 1, VAL_GROUPS_TOGETHER, VAL_GROUPS_AS_COLUMNS, fileTypeI);
+					  for(unsigned int m=0;m<10;m++)
+					  printf("%d ——%lf \n",m,aiin[m]);
 				      MessagePopup ("载入文件", "载入成功！");
 				 }
 			break;
@@ -248,7 +222,7 @@ int CVICALLBACK systemtime (int panel, int control, int event,
 		GetSystemDate (&Month, &Day, &Year);
         Fmt (dateString, "%d年%d月%d日",Year,Month,Day);
 		Fmt (timeString, "%d:%d:%d",Hours,Minutes,Seconds);  
-		Fmt (timeStringfile, "%d时%d分%d秒",Hours,Minutes,Seconds);
+		Fmt (timeStringfile, "%d %d %d",Hours,Minutes,Seconds);
 	    SetCtrlVal (panelHandle, PANEL_STRING, dateString);
         SetCtrlVal (panelHandle, PANEL_STRING_2, timeString);
 			break;

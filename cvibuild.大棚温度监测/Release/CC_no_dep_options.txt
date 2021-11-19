@@ -1,1 +1,1 @@
--force-include-file "温度测控.c";"g:\All open source projects\大棚温度实时检测系统\温度测控.c" 
+-force-include-file "大棚温度监测.c";"g:\All open source projects\大棚温度实时检测系统\大棚温度监测.c" 

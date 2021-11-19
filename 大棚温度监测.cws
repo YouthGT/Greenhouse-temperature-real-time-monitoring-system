@@ -14,10 +14,10 @@ Number of Projects = 1
 Active Project = 1
 Project 0001 = "大棚温度监测.prj"
 Drag Bar Left = 106
-Window Top = 176
-Window Left = 100
-Window Bottom = 812
-Window Right = 1176
+Window Top = 31
+Window Left = 24
+Window Bottom = 815
+Window Right = 1278
 Maximized = False
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -31,7 +31,7 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 3
+Number of Opened Files = 2
 Window Confinement Region Enabled = True
 MainColumnWidth = 89
 FileDateColumnWidth = 70
@@ -41,32 +41,32 @@ FileSizeColumnWidth = 70
 Version = 2000
 Don't Update DistKit = False
 Platform Code = 4
-Build Configuration = "Debug"
+Build Configuration = "Release"
 Warn User If Debugging Release = 1
 Batch Build Release = False
 Batch Build Debug = False
 
 [File 0001]
+Path = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.c"
+File Type = "CSource"
+Disk Date = 3720174385
+In Projects = "1,"
+Source Window State = "1,285,285,285,26,26,26,0,0,0,0,0,0,0,0,0,271,0,285,26,349,628,1,0,"
+Window Top = 33
+Window Left = 10
+Window Z-Order = 1
+
+[File 0002]
 Path Line0001 = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.ui"
 Path Line0002 = "r"
 File Type = "User Interface Resource"
-Disk Date = 3720096063
+Disk Date = 3720165011
 In Projects = "1,"
 Window Top = 33
 Window Left = 10
 Window Height = 349
 Window Width = 621
-Window Z-Order = 3
-
-[File 0002]
-Path = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.c"
-File Type = "CSource"
-Disk Date = 3720096115
-In Projects = "1,"
-Source Window State = "1,103,103,103,13,13,13,0,0,0,0,0,0,0,0,0,85,0,103,13,349,579,1,0,"
-Window Top = 64
-Window Left = 26
-Window Z-Order = 1
+Window Z-Order = 2
 
 [Tab Order]
 Tab 0001 Line0001 = "/g/All open source projects/大棚温度实时检测系统/大棚温度监测.ui"

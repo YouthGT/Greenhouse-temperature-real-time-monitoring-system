@@ -283,7 +283,7 @@ void CVICALLBACK BinaryO (int menuBar, int menuItem, void *callbackData,
 void CVICALLBACK About (int menuBar, int menuItem, void *callbackData,
 						int panel)
 {
-     MessagePopup("关于", "课程设计-YouthGT");	
+     MessagePopup("关于", "L课程设计-YouthGT");	
 	 
 	 
 }
