@@ -34,16 +34,22 @@
 #define  PANEL_TEXTMSG                    19      /* control type: textMsg, callback function: (none) */
 #define  PANEL_TIMER                      20      /* control type: timer, callback function: systemtime */
 #define  PANEL_STRING_2                   21      /* control type: textMsg, callback function: (none) */
-#define  PANEL_DECORATION                 22      /* control type: deco, callback function: (none) */
-#define  PANEL_TEXTMSG_2                  23      /* control type: textMsg, callback function: (none) */
-#define  PANEL_STRING                     24      /* control type: textMsg, callback function: (none) */
-#define  PANEL_AIrate                     25      /* control type: numeric, callback function: (none) */
-#define  PANEL_AIcontrol                  26      /* control type: string, callback function: (none) */
-#define  PANEL_TEXTMSG_6                  27      /* control type: textMsg, callback function: (none) */
-#define  PANEL_DECORATION_2               28      /* control type: deco, callback function: (none) */
-#define  PANEL_STRIPCHART                 29      /* control type: strip, callback function: (none) */
-#define  PANEL_DECORATION_5               30      /* control type: deco, callback function: (none) */
-#define  PANEL_TEXTMSG_7                  31      /* control type: textMsg, callback function: (none) */
+#define  PANEL_DECORATION_6               22      /* control type: deco, callback function: (none) */
+#define  PANEL_DECORATION                 23      /* control type: deco, callback function: (none) */
+#define  PANEL_TEXTMSG_2                  24      /* control type: textMsg, callback function: (none) */
+#define  PANEL_STRING                     25      /* control type: textMsg, callback function: (none) */
+#define  PANEL_AIrate                     26      /* control type: numeric, callback function: (none) */
+#define  PANEL_AIcontrol                  27      /* control type: string, callback function: (none) */
+#define  PANEL_TEXTMSG_8                  28      /* control type: textMsg, callback function: (none) */
+#define  PANEL_TEXTMSG_6                  29      /* control type: textMsg, callback function: (none) */
+#define  PANEL_DECORATION_2               30      /* control type: deco, callback function: (none) */
+#define  PANEL_STRIPCHART                 31      /* control type: strip, callback function: (none) */
+#define  PANEL_DECORATION_5               32      /* control type: deco, callback function: (none) */
+#define  PANEL_TEXTMSG_7                  33      /* control type: textMsg, callback function: (none) */
+#define  PANEL_LED                        34      /* control type: LED, callback function: (none) */
+#define  PANEL_NUMERIC_te                 35      /* control type: numeric, callback function: (none) */
+#define  PANEL_NUMERIC_do                 36      /* control type: numeric, callback function: (none) */
+#define  PANEL_NUMERIC_up                 37      /* control type: numeric, callback function: (none) */
 
 
      /* Control Arrays: */
